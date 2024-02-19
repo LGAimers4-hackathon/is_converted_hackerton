@@ -1,0 +1,30 @@
+주영님께서 하신 코드(0.66code)에다가 아래에 적은 코드부분만 제걸로 고치시면 됩니다!
+
+#테스트와 훈련 셋 분리
+x_train, x_val, y_train, y_val = train_test_split(
+    df_train.drop("is_converted", axis=1),
+    df_train["is_converted"],
+    test_size=0.19,
+    shuffle=True,
+    random_state=400,
+)
+
+threshold =0.9751740004759295 -> 이것도 해당 숫자로 수정해주세요!
+이걸 제출하면 0.676정도의 스코어를 받을 수 있습니다.
+
+====================================================================
+
+제가 따로 더 수정한거
+
+#테스트와 훈련 셋 분리
+x_train, x_val, y_train, y_val = train_test_split(
+    df_train.drop("is_converted", axis=1),
+    df_train["is_converted"],
+    test_size=0.19,
+    shuffle=True,
+    random_state=300,
+)
+
+threshold =0.9692387040999068 -> 이것도 해당 숫자로 수정해주세요!
+
+
